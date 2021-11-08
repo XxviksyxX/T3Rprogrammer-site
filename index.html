@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>T3Rprogrammer</title>
+    <link rel="stylesheet" href="animate.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+</head>
+<body>
+    <br><br>
+    <center>
+    <img src="Inkedgeneratedtext_LI.jpg" alt="T3Rprogrammer">
+    </center>
+<div id="root">
+    <h3 style="color: white;">I'm:</h3>
+     &hairsp;
+    <h3 id="line" class="changeColor">Front-End Developer</h3>
+  </div>
+  <script>
+      const Line = document.querySelector(`#line`);
+const arr = ["the creator of the SECRET team", "a professional programmer and hacker", "the creator of SECRET official bot"];
+let blink = () => {
+  let flag = true;
+  setInterval(() => {
+    Line.classList.toggle("changeColor");
+    flag = false;
+  }, 530);
+};
+
+let wait = async (time) => {
+  return await new Promise((resolve) => {
+    setTimeout(resolve, time);
+  });
+};
+
+let removeLine = async () => {
+  let s = "a";
+  while (s != "") {
+    s = Line.innerHTML.substring(0, Line.innerHTML.length - 1);
+    line.innerHTML = s;
+    await wait(100);
+  }
+};
+
+let makeLine = async (line) => {
+  let string = "";
+  for (let i of line) {
+    string += i;
+    Line.innerHTML = string;
+    await wait(200);
+  }
+  await wait(2000);
+  await removeLine();
+};
+
+let start = async () => {
+  let counter = 5;
+  while (counter) {
+    for (let line of arr) {
+      await makeLine(line);
+      await wait(200);
+    }
+    counter--;
+  }
+};
+
+blink();
+start();
+
+  </script>
+<div class="social-menu">
+    
+    <ul>
+      <li><a href="https://www.instagram.com/t3rprogrammer/"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+    </ul>
+  </div>
+</body>
+</html>
